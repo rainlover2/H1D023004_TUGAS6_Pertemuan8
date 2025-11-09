@@ -10,7 +10,7 @@ Proses ini melibatkan dua file utama:
    
 1. Halaman Pengirim (`form_data.dart`)
 Di halaman ini, kita mengumpulkan data dari pengguna dan "mendorong" data tersebut ke halaman berikutnya.
-Langkah-langkah:
+#Langkah-langkah:
 1.  Mengumpulkan Data: Kita menggunakan `TextEditingController` untuk setiap `TextFormField` (`_namaController`, `_nimController`, `_tahunLahirController`) untuk mendapatkan teks yang diinput oleh pengguna.
 2.  Memicu Navigasi: Aksi pengiriman data terjadi di dalam fungsi `_kirimData` yang dipanggil oleh `onPressed` pada `ElevatedButton` ("Simpan").
 3.  Kalkulasi Data: Sebelum mengirim, kita melakukan kalkulasi sederhana untuk mengubah "Tahun Lahir" menjadi "Umur".
@@ -18,7 +18,7 @@ Langkah-langkah:
 
 2. Halaman Penerima (`tampil_data.dart`)
 Halaman ini didesain untuk *menerima* data saat ia dibuat (diinisialisasi).
-Langkah-langkah:
+#Langkah-langkah:
 1.  Menyiapkan Constructor: Kita mendeklarasikan variabel `final` di dalam class `TampilData` untuk setiap data yang kita harapkan (nama, nim, umur).
 2.  Mewajibkan Data: Kita menambahkan variabel-variabel tersebut ke *constructor* class dan memberinya *keyword* `required`. Ini berarti siapa pun yang ingin membuat halaman `TampilData` **wajib** menyertakan data-data tersebut.
 3.  Menggunakan Data: Setelah data diterima dan disimpan dalam variabel `nama`, `nim`, dan `umur`, kita bisa langsung menggunakannya di dalam method `build` untuk menampilkannya di layar, misalnya di dalam `Text` widget.
